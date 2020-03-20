@@ -1,11 +1,11 @@
 .App {
   text-align: center;
   display:flex;
+  flex-direction: row;
+  margin: 100px;
 }
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
-* {
-  box-sizing: border-box;
-}
+
 
 #root,
 html,
@@ -24,15 +24,11 @@ body {
   
 }
 
-.App {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
+
 
 .smurf-form {
-  width: 460px;
-  margin: auto 100px;
+  width: 40%;
+  margin: 100px;
   padding: 32px;
   font-weight: bold;
   background-color:#80bfff;
@@ -88,8 +84,7 @@ button {
   font-weight: 500;
   color: #fff;
   cursor: pointer;
-  outline: none;
-  -webkit-appearance: none;
+  
 }
 
 button:disabled {
@@ -109,6 +104,14 @@ button.outline {
 
 .smurf-card{
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: lightgreen;
+}
+
+.smurf{
+  display:flex;
+  flex-direction:row;
+  margin: 20px;
+  width: 100%;
+  flex-wrap: wrap;
 }
