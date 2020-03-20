@@ -3,26 +3,36 @@ import { connect } from 'react-redux';
 import { getSmurf } from '../actions/actions';
 
 function Smurfs(props){
+    console.log(props, "props");
     return (
+        <>
         <div>
-          {props.loading ? <h1>Loading</h1> : <div> <h1>{props.name}</h1> <h2>{props.age}</h2> <h2>{props.height}</h2> </div>}
+          {props.loading ? <h1>Loading</h1> : <div>{props.smurfs.map(smurfl => (
+              <div className ="smurf-card">
+                  <h1>{smurfl.name}</h1>
+                  <h2>{smurfl.age}</h2>
+                  <h2>{smurfl.height}</h2>
+                </div>  
+            ))}  
+        </div>
+        }
           <button
             onClick={() => {
               props.getSmurf();
             }}
           >
-            Get Another Smurf
+            SHOW UPDATED SMURFS
           </button>
-         
-          
-    
-
         </div>
+        </>
     );
 }
+
+
+const mapStateToProps = state => ({
+    loading: state.loading, 
+    smurfs: state.smurfs, 
+    error: state.error 
+});
 export default connect(
-    state => {
-      return { loading: state.loading, name: state.name, age: state.age, height: state.height };
-    },
-    { getSmurf }
-  )(Smurfs);
+    mapStateToProps,{ getSmurf })(Smurfs);

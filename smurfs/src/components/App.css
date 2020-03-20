@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display:flex;
 }
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
 * {
@@ -76,10 +77,6 @@ label {
   margin-top: 0.25rem;
 }
 
-
-
-
-
 button {
   max-width: 150px;
   margin: 32px 0;
@@ -108,4 +105,10 @@ button.outline {
   background-color: #eee;
   border: 1px solid #aaa;
   color: #555;
+}
+
+.smurf-card{
+  display:flex;
+  flex-direction: row;
+  background-color: lightgreen;
 }
