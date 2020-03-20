@@ -13,12 +13,16 @@ function Smurfs(props){
           >
             Get Another Smurf
           </button>
+         
+          
+    
+
         </div>
     );
 }
 export default connect(
     state => {
-      return { loading: state.loading, name: state.name };
+      return { loading: state.loading, name: state.name, age: state.age, height: state.height };
     },
     { getSmurf }
   )(Smurfs);

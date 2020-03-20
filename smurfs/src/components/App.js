@@ -3,12 +3,14 @@ import "./App.css";
 import Smurfs from '../components/Smurfs';
 import FormikForm from './Form';
 
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Smurfs/>
         <FormikForm />
+        
       </div>
     );
   }
